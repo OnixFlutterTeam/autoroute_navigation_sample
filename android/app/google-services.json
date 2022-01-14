@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853350278430",
+    "project_id": "autoroutedemoflow",
+    "storage_bucket": "autoroutedemoflow.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853350278430:android:5948769f981c0c7bab150f",
+        "android_client_info": {
+          "package_name": "com.demo.autoroute.auto_route_demo_flow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853350278430-ajipkvpkkfk078gertajstl3u3ukhcbl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP_RsSV25JCjmobggj2Rv-4cX9GQMsODc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853350278430-ajipkvpkkfk078gertajstl3u3ukhcbl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
