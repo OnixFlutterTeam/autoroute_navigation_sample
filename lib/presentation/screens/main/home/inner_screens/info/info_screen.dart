@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class _InfoScreenState extends State<InfoScreen> {
           const Text('Info Screen'),
           const Delimiter.height(16),
           DefaultButton(
-            title: 'nav to profile',
+            title: 'Navigate to profile screen',
             onTap: () {
               context.navigateTo(const ProfileRoute());
             },

@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/common/will_pop_dialog.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
@@ -26,28 +27,28 @@ class _MainScreenState extends State<MainScreen> {
                 const Text('MAIN'),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'nav to home',
+                  title: 'Navigate to home screen',
                   onTap: () {
                     context.navigateTo(const HomeRoute());
                   },
                 ),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'nav to profile',
+                  title: 'Navigate to profile screen',
                   onTap: () {
                     context.navigateTo(const ProfileRoute());
                   },
                 ),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'nav to splash',
+                  title: 'Navigate to splash screen',
                   onTap: () {
                     context.replaceRoute(const SplashRoute());
                   },
                 ),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'nav to add product item',
+                  title: 'Navigate to add product screen',
                   onTap: () {
                     context.navigateTo(
                       const HomeRoute(children: [

@@ -1,3 +1,6 @@
+import 'package:auto_route_demo_flow/arch/data/local/prefs/base_preferences.dart';
+import 'package:auto_route_demo_flow/data/local/source/preferences_source/preferences_source.dart';
+import 'package:auto_route_demo_flow/data/local/source/preferences_source/preferences_source_impl.dart';
 import 'package:auto_route_demo_flow/data/local/source/product/product_source.dart';
 import 'package:auto_route_demo_flow/data/local/source/product/product_source_impl.dart';
 import 'package:auto_route_demo_flow/data/services/auth_service.dart';
@@ -19,9 +22,6 @@ void setUpServiceLocator() {
   getIt.registerSingleton<AuthService>(AuthService());
   getIt.registerLazySingleton<DynamicLinkService>(() => DynamicLinkService());
 
-  //ROUTER
-  getIt.registerSingleton<AppRouter>(AppRouter(isAuth: CheckIsAuth()));
-
   // REPOSITORY
   getIt.registerLazySingleton<ProductRepository>(() => ProductRepositoryImpl());
   getIt.registerLazySingleton<ProductFavouriteRepository>(
@@ -32,16 +32,26 @@ void setUpServiceLocator() {
     getIt.get<ProductRepository>(),
     getIt.get<ProductFavouriteRepository>(),
   ));
+  getIt.registerLazySingleton<PreferencesSource>(
+      () => PreferencesSourceImpl(getIt.get<BasePreferences>()));
+
+  // PREFS
+  getIt.registerLazySingleton(() => BasePreferences());
 
   // BLOC
   getIt.registerFactory<HomeBloc>(() => HomeBloc());
   getIt.registerFactory<FavouriteBloc>(() => FavouriteBloc());
+
+  //ROUTER
+  getIt.registerSingleton<AppRouter>(AppRouter(isAuth: CheckIsAuth()));
 }
 
 AppRouter appRouter() => getIt<AppRouter>();
 
 // SOURCE
 ProductSource productSource() => getIt.get<ProductSource>();
+
+PreferencesSource preferencesSource() => getIt.get<PreferencesSource>();
 
 //SERVICE
 AuthService authService() => getIt.get<AuthService>();

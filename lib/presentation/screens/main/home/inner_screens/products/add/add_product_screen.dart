@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/domain/entities/product_entity.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/screens/main/home/bloc/home_bloc.dart';
@@ -37,20 +38,21 @@ class _AddProductScreenState extends State<AddProductScreen> {
             const Text('Add product Screen'),
             const Delimiter.height(16),
             DefaultButton(
-              title: 'nav to congratulations screen',
+              title: 'Navigate to congratulations screen',
               onTap: () {
                 context.replaceRoute(const CongratulationsRoute());
               },
             ),
             const Delimiter.height(16),
             DefaultButton(
-              title: 'nav back',
+              title: 'Navigate back',
               onTap: () {
                 context.navigateBack();
               },
             ),
+            const Delimiter.height(16),
             DefaultButton(
-              title: 'Add new item',
+              title: 'Generate new item',
               onTap: () {
                 final entity = ProductEntity(
                   id: _random.nextInt(100),

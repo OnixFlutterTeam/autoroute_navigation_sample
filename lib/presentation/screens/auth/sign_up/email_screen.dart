@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
 import 'package:flutter/material.dart';
@@ -32,14 +33,14 @@ class EmailScreen extends StatelessWidget {
                 ),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'enter email',
+                  title: 'Confirm email',
                   onTap: () {
                     onNext(_textController.text);
                   },
                 ),
                 const Delimiter.height(16),
                 DefaultButton(
-                  title: 'nav to sign up',
+                  title: 'Navigate to sign in screen',
                   onTap: () {
                     context.navigateTo(const SignInRoute());
                   },

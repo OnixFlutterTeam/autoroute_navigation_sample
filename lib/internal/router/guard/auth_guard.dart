@@ -6,7 +6,7 @@ import '../app_router.dart';
 class CheckIsAuth extends AutoRouteGuard {
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
-    final isAuth = authService().isLoggedIn || authService().isSignUpComplete;
+    final isAuth = await authService().isLoggedIn;
     if (isAuth) {
       resolver.next(true);
     } else {

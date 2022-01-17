@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
-import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
 import 'package:flutter/material.dart';
 
 class SettingsScreen extends StatefulWidget {
@@ -22,7 +22,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Delimiter.height(16),
-            const Text('settings screen'),
+            const Text('Settings screen'),
             const Delimiter.height(16),
             Expanded(
               child: Row(

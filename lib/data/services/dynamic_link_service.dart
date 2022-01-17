@@ -13,11 +13,6 @@ class DynamicLinkService {
         packageName: 'com.demo.autoroute.auto_route_demo_flow',
         minimumVersion: 1,
       ),
-      // iosParameters: const IOSParameters(
-      //   bundleId: 'com.demo.autoroute.auto_route_demo_flow',
-      //   minimumVersion: '1',
-      //   appStoreId: '123456789',
-      // ),
     );
 
     Uri url;

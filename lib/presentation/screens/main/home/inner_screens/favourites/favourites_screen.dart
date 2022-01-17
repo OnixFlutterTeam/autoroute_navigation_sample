@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_demo_flow/arch/widget/base/base_block_state.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/screens/main/home/bloc/home_bloc.dart';
 import 'package:auto_route_demo_flow/presentation/screens/main/home/bloc/home_event.dart';
@@ -37,10 +38,11 @@ class _FavouritesScreenState
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              const Delimiter.height(16),
               const Text('Favourites Screen'),
-              // const Delimiter.height(16),
+              const Delimiter.height(16),
               DefaultButton(
-                title: 'nav to products list',
+                title: 'Navigate to products list screen',
                 onTap: () {
                   context.navigateTo(const ProductsRouter());
                 },

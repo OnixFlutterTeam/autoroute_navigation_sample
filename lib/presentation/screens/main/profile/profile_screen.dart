@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/dependency/service_locator.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
@@ -21,31 +22,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text('profile screen'),
+              const Text('Profile screen'),
               const Delimiter.height(16),
               DefaultButton(
-                title: 'logOut -> nav to sign in',
+                title: 'LogOut -> navigate to sign in screen',
                 onTap: () {
                   authService().logOut();
                   context.router.replaceAll([
                     const SplashRoute(),
                     const AuthRouter(),
                   ]);
-                  //DOING THE SAME
-                  // context.replaceRoute(const SplashRoute());
-                  // context.pushRoute(const AuthRouter());
                 },
               ),
               const Delimiter.height(16),
               DefaultButton(
-                title: 'nav to settings',
+                title: 'Navigate to settings screen',
                 onTap: () {
                   context.navigateTo(const SettingsRoute());
                 },
               ),
               const Delimiter.height(16),
               DefaultButton(
-                title: 'nav to main',
+                title: 'Navigate to main screen',
                 onTap: () {
                   context.router.root.replaceAll([const MainRoute()]);
                 },

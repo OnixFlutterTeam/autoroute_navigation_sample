@@ -14,11 +14,11 @@ class ErrorScreen extends StatelessWidget {
         ),
         automaticallyImplyLeading: true,
         centerTitle: true,
-        title: const Text('defaultErrorTitle'),
+        title: const Text('Error Title'),
       ),
       body: const SafeArea(
         child: Center(
-          child: Text('defaultErrorMessage'),
+          child: Text('Error Message'),
         ),
       ),
     );

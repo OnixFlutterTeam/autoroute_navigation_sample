@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:auto_route_demo_flow/arch/logger.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/screens/main/home/bloc/home_bloc.dart';
 import 'package:auto_route_demo_flow/presentation/screens/main/home/bloc/home_event.dart';
@@ -31,10 +32,11 @@ class _ProductsScreenState extends State<ProductsScreen> {
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
+          const Delimiter.height(16),
           const Text('Products list Screen'),
           const Delimiter.height(16),
           DefaultButton(
-            title: 'nav to add item',
+            title: 'Add item',
             onTap: () {
               context.navigateTo(const AddProductRoute());
             },

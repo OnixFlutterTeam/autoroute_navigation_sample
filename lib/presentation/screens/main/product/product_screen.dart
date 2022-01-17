@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route_demo_flow/arch/widget/common/misk.dart';
 import 'package:auto_route_demo_flow/dependency/service_locator.dart';
 import 'package:auto_route_demo_flow/internal/router/app_router.dart';
 import 'package:auto_route_demo_flow/presentation/widgets/misk.dart';
@@ -32,7 +33,7 @@ class _ProductScreenState extends State<ProductScreen> {
             const Text('Product item Screen'),
             const Delimiter.height(16),
             DefaultButton(
-              title: 'nav to favourite',
+              title: 'Navigate to favourite screen',
               onTap: () {
                 context.navigateTo(const HomeRoute(
                   children: [FavouritesRoute()],
@@ -41,7 +42,7 @@ class _ProductScreenState extends State<ProductScreen> {
             ),
             const Delimiter.height(16),
             DefaultButton(
-              title: 'nav to products list',
+              title: 'Navigate to products list screen',
               onTap: () {
                 context.navigateTo(const HomeRoute(
                   children: [ProductsRouter()],

@@ -1,6 +1,6 @@
 # auto_route_demo_flow
 
-A new Flutter project.
+A auto route navigation demo project.
 
 ##run the generator
 #Use the [watch] flag to watch the files' system for edits and rebuild as necessary.
@@ -32,3 +32,12 @@ adb shell am start -a android.intent.action.VIEW \
 adb shell am start -a android.intent.action.VIEW \
 -c android.intent.category.BROWSABLE \
 -d 'auto_route_demo://autoroutedemo.page.link/main/home/info'
+
+# update IOS repos:
+cd ios
+pod cache clean --all
+pod repo update
+pod update
+cd ..
+flutter clean
+flutter build ios

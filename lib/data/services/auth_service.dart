@@ -1,13 +1,13 @@
-class AuthService {
-  bool _loggedIn = false;
+import 'package:auto_route_demo_flow/dependency/service_locator.dart';
 
+class AuthService {
   String _email = '';
 
   String _password = '';
 
   bool _onSignUpComplete = false;
 
-  bool get isLoggedIn => _loggedIn;
+  Future<bool> get isLoggedIn => preferencesSource().getIsLoggedIn();
 
   bool get isSignUpComplete => _onSignUpComplete;
 
@@ -18,19 +18,20 @@ class AuthService {
   void login(String email, String password) {
     _email = email;
     _password = password;
-    _loggedIn = true;
+    preferencesSource().saveIsLoggedIn(true);
   }
 
   void completeSignUp(String email, String password) {
     _email = email;
     _password = password;
     _onSignUpComplete = true;
+    preferencesSource().saveIsLoggedIn(true);
   }
 
   void logOut() {
     _email = '';
     _password = '';
-    _loggedIn = false;
     _onSignUpComplete = false;
+    preferencesSource().clearIsLoggedIn();
   }
 }
