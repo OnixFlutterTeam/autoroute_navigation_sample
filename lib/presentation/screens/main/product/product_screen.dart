@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 class ProductScreen extends StatefulWidget {
   const ProductScreen({
     Key? key,
-    @PathParam('productId') required this.productId,
-    @PathParam('showRemoveBtn') this.showRemoveBtn = true,
+    required this.productId,
+    this.showRemoveBtn = true,
   }) : super(key: key);
 
   final int productId;

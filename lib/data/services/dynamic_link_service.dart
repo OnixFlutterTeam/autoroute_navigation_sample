@@ -23,6 +23,7 @@ class DynamicLinkService {
     } else {
       url = await dynamicLinks.buildLink(parameters);
     }
+    Logger.log('dynamicLinks: $url');
     return url.toString();
   }
 

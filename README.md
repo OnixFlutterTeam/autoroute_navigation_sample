@@ -9,6 +9,7 @@ flutter packages pub run build_runner watch
 #if you want the generator to run one time and exits use
 flutter packages pub run build_runner build        
 
+flutter pub run build_runner build --delete-conflicting-outputs
 
 #DL URL scheme
 auto_route_demo://autoroutedemo.page.link/<path>

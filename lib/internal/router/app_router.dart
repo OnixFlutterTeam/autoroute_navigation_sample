@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:auto_route/empty_router_widgets.dart';
 import 'package:auto_route_demo_flow/presentation/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:auto_route_demo_flow/presentation/screens/auth/sign_up/email_screen.dart';
 import 'package:auto_route_demo_flow/presentation/screens/auth/sign_up/password_screen.dart';
